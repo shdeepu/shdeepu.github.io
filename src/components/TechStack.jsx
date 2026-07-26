@@ -15,7 +15,11 @@ import {
   FlameKindling,
   PersonStandingIcon,
   FileJson,
-  Baseline
+  Baseline,
+  Terminal,
+  AppWindow, 
+  HardDrive,
+  Cloud
 } from 'lucide-react'
 
 const TechStack = () => {
@@ -149,6 +153,52 @@ const TechStack = () => {
       bgColor: 'bg-blue-50 dark:bg-blue-950',
       experience: '3+ years',
       projects: '15+ projects'
+    },
+    {
+      name: 'C#',
+      icon: Terminal,
+      description: 'Desktop application logic, data-wrapping forms, and offline system architecture',
+      color: 'from-purple-500 to-purple-700',
+      bgColor: 'bg-purple-50 dark:bg-purple-950',
+      experience: '1+ years',
+      projects: '2+ projects'
+    },
+    {
+      name: '.NET / WPF',
+      icon: AppWindow,
+      description: 'Building robust, offline-isolated desktop interfaces and commercial operations software',
+      color: 'from-blue-500 to-blue-700',
+      bgColor: 'bg-blue-50 dark:bg-blue-950',
+      experience: '1+ years',
+      projects: '2+ projects'
+    },
+    {
+      name: 'SQLite',
+      icon: HardDrive,
+      description: 'Local database management, offline stock tracking, and barcode search capabilities',
+      color: 'from-sky-400 to-sky-600',
+      bgColor: 'bg-sky-50 dark:bg-sky-950',
+      experience: '2+ years',
+      projects: '5+ databases'
+    },
+
+    {
+      name: 'Nginx',
+      icon: Server,
+      description: 'Web server configuration, reverse proxy setup, load balancing, and secure deployment',
+      color: 'from-green-500 to-green-700',
+      bgColor: 'bg-green-50 dark:bg-green-950',
+      experience: '1+ years',
+      projects: '5+ deployments'
+    },
+    {
+      name: 'Supabase',
+      icon: Cloud,
+      description: 'Backend-as-a-Service integration for PostgreSQL databases, authentication, and real-time subscriptions',
+      color: 'from-emerald-400 to-emerald-600',
+      bgColor: 'bg-emerald-50 dark:bg-emerald-950',
+      experience: '2+ years',
+      projects: '5+ projects'
     },
 
 

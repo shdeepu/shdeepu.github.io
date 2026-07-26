@@ -47,8 +47,8 @@ const About = () => {
     { 
       name: 'Django', 
       level: 75, 
-      description: 'High-performance API development with automatic documentation and validation',
-      color: 'from-ash-400 to-red-500'
+      description: 'Robust backend development, ORM integration, and scalable web architecture',
+      color: 'from-slate-500 to-slate-700'
     },
     { 
       name: 'PostgreSQL', 
@@ -67,19 +67,55 @@ const About = () => {
       level: 75, 
       description: 'Containerization and deployment of applications',
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'C#', 
+      level: 80, 
+      description: 'Desktop application logic and offline system architecture',
+      color: 'from-purple-500 to-purple-700'
+    },
+    { 
+      name: '.NET / WPF', 
+      level: 75, 
+      description: 'Building robust, offline-isolated desktop interfaces',
+      color: 'from-blue-600 to-indigo-700'
+    },
+    { 
+      name: 'SQLite', 
+      level: 85, 
+      description: 'Local database management and offline tracking',
+      color: 'from-sky-400 to-blue-500'
+    },
+    { 
+      name: 'Supabase', 
+      level: 80, 
+      description: 'BaaS integration for databases and real-time subscriptions',
+      color: 'from-emerald-400 to-emerald-600'
+    },
+    { 
+      name: 'Nginx', 
+      level: 75, 
+      description: 'Web server configuration and secure deployment',
+      color: 'from-green-500 to-green-700'
     }
   ]
 
-  const timeline = [
+const timeline = [
     {
-      year: '2024 - Present',
-      title: 'Software Engineer | BMIT Solutions Ltd.',
-      description: 'Leading full-stack development projects with React and FastAPI',
+      year: '2026 - Present',
+      title: 'Software Engineer | AFAM Group',
+      description: 'Engineering a custom Human Resource Management system, attendance hardware integrations, and corporate web portals.',
       icon: Award
     },
     {
+      year: '2024 - 2026',
+      title: 'Software Engineer | BMIT Solutions Ltd.',
+      description: 'Leading full-stack development projects with React and FastAPI',
+      icon: Code
+    },
+    {
       year: '2023',
-      title: 'Full-Stack Developer | PID(Govt. Project)',
+      title: 'Full-Stack Developer | PID (Govt. Project)',
       description: 'Built scalable web applications and RESTful APIs',
       icon: Code
     },
