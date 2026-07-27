@@ -96,7 +96,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* Grid Skills Section */}
+  {/* Grid Skills Section */}
           <motion.div
             className="mb-24"
             initial={{ opacity: 0, y: 30 }}
@@ -104,25 +104,29 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <h3 className="text-3xl font-bold text-center mb-10">Technical Arsenal</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {/* Updated grid for better mobile spacing with the new text */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill.name}
-                  className="group relative p-5 bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl hover:border-primary/50 hover:bg-card/60 transition-all duration-300 overflow-hidden cursor-default"
+                  className="group relative p-5 bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl hover:border-primary/50 hover:bg-card/60 transition-all duration-300 overflow-hidden cursor-default flex flex-col h-full shadow-sm hover:shadow-md"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.4, delay: 0.05 * index }}
-                  onMouseEnter={() => setHoveredSkill(skill.name)}
-                  onMouseLeave={() => setHoveredSkill(null)}
                 >
                   {/* Subtle hover gradient background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                   
-                  <div className="relative z-10">
-                    <h4 className="font-semibold text-foreground mb-3">{skill.name}</h4>
+                  <div className="relative z-10 flex flex-col flex-grow">
+                    <h4 className="font-bold text-foreground mb-2">{skill.name}</h4>
                     
-                    {/* Modern thin progress bar */}
-                    <div className="w-full bg-muted/50 rounded-full h-1.5 overflow-hidden mb-2">
+                    {/* Description is now always visible and neatly formatted */}
+                    <p className="text-xs text-muted-foreground mb-5 flex-grow leading-relaxed">
+                      {skill.description}
+                    </p>
+                    
+                    {/* Modern thin progress bar stays at the bottom */}
+                    <div className="w-full bg-muted/80 rounded-full h-1.5 overflow-hidden mt-auto">
                       <motion.div
                         className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
                         initial={{ width: 0 }}
@@ -131,16 +135,11 @@ const About = () => {
                       />
                     </div>
                   </div>
-
-                  {/* Tooltip Overlay */}
-                  <div className={`absolute inset-0 bg-card/95 backdrop-blur-md p-4 flex items-center justify-center text-center transition-all duration-300 ${hoveredSkill === skill.name ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-                    <p className="text-xs text-foreground font-medium">{skill.description}</p>
-                  </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-
+          
           {/* Interactive Timeline Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
